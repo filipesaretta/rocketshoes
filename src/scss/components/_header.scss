@@ -2,24 +2,26 @@
   position: absolute;
   width: 100%;
   display: grid;
-  grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: auto 1fr max-content;
   padding: 4rem 6rem;
   align-items: center;
+  height: 5rem;
+
+  z-index: 10;
+
   &__logo {
     width: 50px;
   }
 
   &__nav {
-    margin-left: 8rem;
-
     .nav__list {
-      display: grid;
+      display: flex;
+      justify-content: center;
+      margin-left: 2rem;
       list-style: none;
-      // grid-template-columns: repeat(4, minmax(150px, 1fr));
-      grid-template-columns: repeat(4, minmax(100px, 1fr));
 
       @media (min-width: 900px) {
-        grid-template-columns: repeat(4, minmax(180px, 1fr));
+        margin-left: 0;
       }
     }
     .list__item {
