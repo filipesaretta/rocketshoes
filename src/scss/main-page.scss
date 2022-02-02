@@ -1,19 +1,73 @@
 .container {
-  max-width: 1440px;
+  max-width: 1600px;
   margin: 0 auto;
   min-height: 100vh;
   position: relative;
 }
 
-// .price {
-// }
+.main {
+  display: grid;
+  grid-template-columns: 500px 1fr;
 
-// .main {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
+  padding-top: 10rem;
+  font-family: "Roboto";
 
-//   .product {
-//     background-color: #c4c4c4;
-//     position: relative;
-//   }
-// }
+  .price {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10.5rem;
+    margin-left: 11.5rem;
+
+    &__title {
+      font-size: 4rem;
+      font-weight: bold;
+      max-width: 35.7rem;
+    }
+
+    &__description {
+      color: #9c9696;
+      margin-top: 2.1rem;
+    }
+    &__cost {
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 3rem 0;
+    }
+
+    .button {
+      max-width: 25rem;
+      height: 90px;
+      background: #ff0000;
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      transition: filter 0.3s ease;
+      &:hover {
+        filter: brightness(92%);
+      }
+    }
+  }
+  .product {
+    background-color: #c4c4c4;
+    position: relative;
+    top: -10rem;
+    max-width: 900px;
+    justify-self: end;
+    .main-image {
+      padding-top: 150px;
+      margin: 0 auto;
+    }
+
+    .image-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem;
+    }
+    .selected {
+      position: relative;
+      border-bottom: solid 5px red;
+    }
+  }
+}
